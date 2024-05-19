@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Notification</title>
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        a,
+        input[type="submit"] {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: large;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover,
+        input[type="submit"]:hover {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        h2 {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="Hospital.html">
+            <h2>WARNING!</h2>
+            <p>This will send an Emergency Notification.</p>
+            <h4>Are You Sure?</h4>
+            <a href="Map.html">CANCEL</a><input type="submit" value="YES">
+        </form>
+    </div>
+</body>
+
+</html>
