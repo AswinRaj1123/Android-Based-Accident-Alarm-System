@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+        .container {
+            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+
+        .left-section {
+            flex: 1;
+            overflow: hidden;
+        }
+
+
+        .left-section img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+
+        .right-section {
+            flex: 1;
+            padding: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: 100px; /* Adjust the max-width as needed */
+            height: auto;
+        }
+
+
+        fieldset {
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #eaeaea;
+            background-color: #f8f8f8;
+            margin-bottom: 20px;
+        }
+
+
+        legend {
+            font-size: 1.5em;
+            color: #333;
+            padding: 0 10px;
+            background-color: #f8f8f8;
+        }
+
+
+        input {
+            outline: none;
+            border: none;
+            margin: 10px;
+            font-size: large;
+            border-bottom: 2px solid #ddd;
+            height: 25px;
+            width: calc(100% - 20px);
+            padding: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+
+        input:hover,
+        input:focus {
+            border-bottom: 3px solid #3498db;
+        }
+
+
+        .input2 {
+            font-size: 20px;
+            color: #fff;
+            width: 100%;
+            border-radius: 4px;
+            background-color: #3498db;
+            height: 35px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .input2:hover {
+            background-color: #2980b9;
+        }
+
+
+        a {
+            color: #333;
+            text-decoration: none;
+            font-size: large;
+            margin-top: 10px;
+            display: block;
+        }
+
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+
+        .social-button {
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+
+        .social-button:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <!-- Replace the placeholder with your actual image -->
+            <img src="Road.jpg" alt="Background Image">
+        </div>
+        <div class="right-section">
+            <img src="Logo.png" alt="Logo" class="logo">
+            <form action="login" method="post" autocomplete="off">
+                <fieldset>
+                    <legend>Login</legend>
+                    User Name: <input type="text" name="name" required="required">
+                    Password: <input type="password" name="pword" required="required">
+                </fieldset>
+                <input class="input2" type="submit" value="Login">
+                <div class="social-buttons">
+                    <!-- Replace the placeholders with your actual social media links -->
+                    <div class="social-button">Facebook</div>
+                    <div class="social-button">X</div>
+                    <div class="social-button">Instagram</div>
+                </div>
+                <a href="Register.html">Create an account</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
