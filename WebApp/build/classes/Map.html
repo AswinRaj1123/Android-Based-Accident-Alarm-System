@@ -1,0 +1,147 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+            text-decoration: none;
+        }
+        .sidebar{
+            height: 100%;
+            position: fixed;
+            left: -250px;
+            width: 250px;
+            background: rgb(107, 107, 189);
+            transition: all .5s ease;
+
+        }
+        .sidebar header{
+            font-family: 'roboto', sans-serif;
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+            background: rgb(132, 100, 163);
+            user-select: none;
+        }
+        .sidebar ul {
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 65px;
+            font-size: 20px;
+            color: white;
+            padding-left: 20px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255, 255, 255,.1);
+            border-bottom: 1px solid black;
+        }
+        .sidebar ul li:hover {
+            cursor: pointer;
+            padding-left: 30px;
+        }
+        .sidebar ul i{
+            margin-right: 16px;
+        }
+        #check{
+            display: none;
+        }
+        label #button,label #cancel{
+            position: absolute;
+            cursor: pointer;
+        }
+        label #button{
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+            padding: 12px;
+            margin-top: 0;
+        }
+        label #cancel{
+            z-index: 1111;
+            left: -195px;
+            top: 17px;
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+            padding: 4px 9px;
+            transition: all .5s;
+        }
+        #check:checked ~ .sidebar{
+            left: 0;
+        }
+        #check:checked ~ label #button{
+            left: 250px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #check:checked ~ label #cancel{
+            left: 195px;
+        }
+        .check1{
+            background: rgb(249, 249, 186);
+            text-align: center;
+            height: 6%;
+            padding-top: 5px;
+            font-size: x-large;
+        }
+        input{
+            margin-left: 20px;
+        }
+        body{
+            background: rgb(9, 117, 124);
+        }
+        .head1{
+            margin-top: 10px;
+            text-align: center;
+        }
+        input[type=submit]{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: x-large;
+            color: white;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            font-size: 25px;
+            color: rgb(255, 0, 0);
+            background: white;
+            border-radius: 4px;
+        }
+        input[type=checkbox]{
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="button"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+            <!-- <i class="fa fa-bars"></i><span class="home">Home</span> -->
+        <header>Home</header>
+            <ul>
+                <li><i class="fa-solid fa-clock-rotate-left"></i>History</li>
+                <li><i class="fa-solid fa-pen"></i>Update Information</li>
+                <li><i class="fa-solid fa-address-book"></i>Add Contacts</li>
+                <li><i class="fa-solid fa-lock"></i>Change Password</li>
+                <li><i class="fa-solid fa-right-from-bracket"></i>Sign Out</li>                                                                            
+            </ul>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61360664.92304701!2d70.39040778268257!3d19.301962959228543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f99572a1e55b%3A0xdbcd1cc310e62cf2!2sInfo%20Institute%20of%20Engineering%20Road%2C%20Tamil%20Nadu%20641107!5e0!3m2!1sen!2sin!4v1702949333971!5m2!1sen!2sin" style="margin-top:4%" width="100%" height="77%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <base>
+            <form action="servlet" method="post">
+            <div class="check1">
+            <input type="checkbox" name="emer" value="amb">Ambulance
+            <input type="checkbox" name="emer" value="fire">Fire Brigade
+            <input type="checkbox" name="emer" value="pol">Police
+            </div>
+        <div class="head1">
+            <input type="submit" value="Emergency">
+        </div>
+            </form> 
+    </base>
+</body>
+</html>
